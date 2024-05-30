@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>AmoRoma</title>
+</head>
+<style></style>
+<!-- Body -->
+<body>
+  <!-- Section  -->
+<section class="hero">
+  <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+          <li><a href="index.html"><img src="images/Logo.png" alt="AmoRomA Logo" class="logo"></a></li>
+          <li><span class="amoroma">AmoRomA</span></li>
+        </ul>
+        <div class="spacer"></div> <!-- Spacer article for seperating left and right-->
+        <ul>
+          <li><a class="nav-links" href="#menu">Menu</a></li>
+          <li><a class="nav-links" href="#socials">Socials</a></li>
+          <li><a class="nav-links" href="#footer">Contact</a></li>
+          <li><button class="wolt-button"><a href="https://wolt.com/da/dnk/aarhus/restaurant/amoroma"><img src="images/wolt.png" alt="wolt-logo" class="wolt-img"></a></button></li>
+          <li><button class="book-button">BOOK TABLE</button></li>
+        </ul>
+      </nav>
+      <h1>Welcome to AmoRomA</h1>
+      <img src="images/pizza.png" alt="Delicious Pizza" class="pizza-image">
+</section>
+
+
+
+<!-- <article id="reservation-modal" class="modal">
+    <article class="modal-content">
+      <article class="header">
+        <h3>Book a Table</h3>
+        <div class="spacer"></div>
+        <span class="close-btn">&times;</span>
+    </article>
+      <form id="reservationForm">
+        <article class="form-left">
+            <label for="date">Date<span class="required-asterisk">*</span></label>
+            <input type="date" id="date" name="date" required>
+        </article>
+
+        <article class="form-right">
+            <label for="name">Name<span class="required-asterisk">*</span></label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+    
+            <label for="people">Number of People<span class="required-asterisk">*</span></label>
+              <select name="people" id="dropdown" class="has-placeholder">
+                <option value="" disabled selected>Select amount ▼ </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+
+            <label for="requests">Special requests</label>
+            <textarea name="requests" rows="4" cols="50" placeholder="Birthday flags on table, baby stool, etc. (optional)"></textarea>
+            <button type="submit" class="submit-button">BOOK A TABLE</button>
+            </article>
+            <div id="confirmation-message">
+              <div id="checkmark-container" class="hidden">
+                <svg id="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+              </div>  
+            </div>
+            
+    </form>
+
+    </article>
+
+</article> -->
+
+<!-- Menu -->
+<section id="menu">
+  <h2>
+    Menu
+  </h2>
+
+  <section id="menu-buttons-container">
+    <button class="menu-button active-button"data-section="1">Pizza</button>
+    <button class="menu-button" data-section="2">Pasta</button>
+    <button class="menu-button" data-section="3">Desserts</button>
+    <button class="menu-button" data-section="4">Drinks</button>
+  </section>
+  
+  <section id="menu-cards-container">
+    <article class="menu-card active" data-section="1">
+      <header>
+        <img class="item-image" src="images/margherita.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Margherita</h4>
+      </header>
+        <p class="item-description">Tomato sauce, mozzarella, basil</p>
+      <footer>
+        <p class="item-price">99,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card active" data-section="1">
+      <header>
+        <img class="item-image" src="images/olive_pizza.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Olive Pizza</h4>
+      </header>
+        <p class="item-description">Tomato sauce, mozzarella, olives, bell peppers, champignon</p>
+      <footer>
+        <p class="item-price">120,-</p>
+      </footer>
+    </article>
+    
+    <article class="menu-card active" data-section="1">
+      <header>
+        <img class="item-image" src="images/Pizza_AmoRomA.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Pizza AmoRomA</h4>
+      </header>
+        <p class="item-description">Tomato sauce, mozzarella, olives, bell peppers, onion, basil, parmesan cheese</p>
+      <footer>
+        <p class="item-price">110,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card active" data-section="1">
+      <header>
+        <img class="item-image" src="images/prosciutto.png" alt="Tomato sauce, mozzarella, boiled ham, peppers and olives">
+        <h4 class="item-name">Pizza al Prosciutto</h4>
+      </header>
+        <p class="item-description">Tomato sauce, mozzarella, boiled ham, peppers and olives</p>
+      <footer>
+        <p class="item-price">139,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card active" data-section="1">
+      <header>
+        <img class="item-image" src="images/funghi.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">funghi</h4>
+      </header>
+        <p class="item-description">Tomato sauce, mozzarella, boiled ham, champignon</p>
+      <footer>
+        <p class="item-price">100,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card active" data-section="1">
+      <header>
+        <img class="item-image" src="images/valtellinese.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Valtellinese</h4>
+      </header>
+        <p class="item-description">Tomato sauce, mozzarella, bresaola, rucola, parmesan</p>
+      <footer>
+        <p class="item-price">110,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card active" data-section="1">
+      <header>
+        <img class="item-image" src="images/carciofetta.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Carciofetta</h4>
+      </header>
+        <p class="item-description">Tomato sauce, mozzarella, parma ham, artichokes</p>
+      <footer>
+        <p class="item-price">105,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card active" data-section="1">
+      <header>
+        <img class="item-image" src="images/piccante.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Piccante</h4>
+      </header>
+        <p class="item-description">Tomato sauce, mozzarella, ventricina (spicy salami)</p>
+      <footer>
+        <p class="item-price">110,-</p>
+      </footer>
+    </article>
+<!--this is for pasta-->
+    <article class="menu-card" data-section="2">
+      <header>
+        <img class="item-image" src="images/agnolotti.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Agnolotti di carne</h4>
+      </header>
+        <p class="item-description">Homemade pasta filled with oxtail</p>
+      <footer>
+        <p class="item-price">120,-</p>
+      </footer>
+    </article>
+    
+    <article class="menu-card" data-section="2">
+      <header>
+        <img class="item-image" src="images/amatriciana.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Pasta amatriciana</h4>
+      </header>
+        <p class="item-description">Spaghetti with tomato sauce and bacon</p>
+      <footer>
+        <p class="item-price">139,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="2">
+      <header>
+        <img class="item-image" src="images/carbonara-1.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Pasta Carbonara</h4>
+      </header>
+        <p class="item-description">Spaghetti with egg, cheese and bacon</p>
+      <footer>
+        <p class="item-price">110,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="2">
+      <header>
+        <img class="item-image" src="images/lasagne-1.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Lasagne</h4>
+      </header>
+        <p class="item-description">Lasagne with bolognese sauce, béchamel and grated cheese</p>
+      <footer>
+        <p class="item-price">99,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="2">
+      <header>
+        <img class="item-image" src="public/images/seafood-1.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Seafood spaghetti</h4>
+      </header>
+        <p class="item-description">Spaghetti with seafood and tomato sauce</p>
+      <footer>
+        <p class="item-price">110,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="2">
+      <header>
+        <img class="item-image" src="images/spaghetti-alle-vongole.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Spaghetti alle vongole</h4>
+      </header>
+        <p class="item-description">Spaghetti with venus clams and cockles</p>
+      <footer>
+        <p class="item-price">110,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="2">
+      <header>
+        <img class="item-image" src="images/gnocchi-1.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Gnocchi al sugo</h4>
+      </header>
+        <p class="item-description">Potato gnocchi with tomato sauce and grated cheese </p>
+      <footer>
+        <p class="item-price">110,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="2">
+      <header>
+        <img class="item-image" src="images/risotto-1.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Risotto 4 formaggi</h4>
+      </header>
+        <p class="item-description">Risotto with gorgonzola, parmesan cheese, emmental cheese and cheese of the day</p>
+      <footer>
+        <p class="item-price">110,-</p>
+      </footer>
+    </article>
+<!--this is the end of pastas-->
+<!--desserts-->
+    <article class="menu-card" data-section="3">
+      <header>
+        <img class="item-image" src="images/tiramisu.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Tiramisu</h4>
+      </header>
+        <p class="item-description">The famous Italian dessert</p>
+      <footer>
+        <p class="item-price">65,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="3">
+      <header>
+        <img class="item-image" src="images/panna-cotta.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Panna cotta</h4>
+      </header>
+        <p class="item-description">Panna cotta with white chocolate and raspberry sauce</p>
+      <footer>
+        <p class="item-price">65,-</p>
+      </footer>
+    </article>
+    
+    <article class="menu-card" data-section="3">
+      <header>
+        <img class="item-image" src="images/tartufo.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Tartufo al cioccolato</h4>
+      </header>
+        <p class="item-description">Chocolate truffle ice cream</p>
+      <footer>
+        <p class="item-price">65,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="3">
+      <header>
+        <img class="item-image" src="images/cuore.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Cuore di cioccolato con gelato</h4>
+      </header>
+        <p class="item-description">Bleeding chocolate cake with vanilla ice cream</p>
+      <footer>
+        <p class="item-price">65,-</p>
+      </footer>
+    </article>
+  <!--drinks-->
+    <article class="menu-card" data-section="4">
+      <header>
+        <img class="item-image" src="images/vecchia.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Vecchia Romagna</h4>
+      </header>
+        <p class="item-description">Italian grape brandy</p>
+      <footer>
+        <p class="item-price">65,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="4">
+      <header>
+        <img class="item-image" src="images/amaretto.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Amaretto</h4>
+      </header>
+        <p class="item-description">An amber-colored liqueur with a characteristic almond taste</p>
+      <footer>
+        <p class="item-price">65,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="4">
+      <header>
+        <img class="item-image" src="images/limoncello.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Limoncello Spritz</h4>
+      </header>
+        <p class="item-description">Limoncello, Prosecco, and club soda</p>
+      <footer>
+        <p class="item-price">65,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="4">
+      <header>
+        <img class="item-image" src="images/aperol_spritz.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Aperol spritz</h4>
+      </header>
+        <p class="item-description">A refreshing drink that is commonly served in the northern part of Italy</p>
+      <footer>
+        <p class="item-price">60,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="4">
+      <header>
+        <img class="item-image" src="images/gradisca.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Gradisca</h4>
+      </header>
+        <p class="item-description">Frisk Premium lager 5,2 % 40 cl</p>
+      <footer>
+        <p class="item-price">65,-</p>
+      </footer>
+    </article>
+    
+    <article class="menu-card" data-section="4">
+      <header>
+        <img class="item-image" src="images/cappucino.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Cappucino</h4>
+      </header>
+        <p class="item-description"></p>
+      <footer>
+        <p class="item-price">45,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="4">
+      <header>
+        <img class="item-image" src="images/gin.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">GinTonic</h4>
+      </header>
+        <p class="item-description"></p>
+      <footer>
+        <p class="item-price">60,-</p>
+      </footer>
+    </article>
+
+    <article class="menu-card" data-section="4">
+      <header>
+        <img class="item-image" src="images/volpina.png" alt="Margherita pizza with tomato sauce, mozzarella, and basil">
+        <h4 class="item-name">Volpina</h4>
+      </header>
+        <p class="item-description">Stærk rød ale 6,5% 25 cl</p>
+      <footer>
+        <p class="item-price">50,-</p>
+      </footer>
+    </article>
+  </section>
+
+<!--Instagram -->
+<section id="socials">
+  <h2>
+    Social Media
+  </h2>
+  <section class="instagram-button-container">
+  <h3>
+    tag us @ristoranteamoroma
+  </h3>
+    <a href="https://www.instagram.com/ristoranteamoroma/">
+      <button class="instagram_button">Instagram ↗</button>
+    </a>
+</section>
+  <section class="social-cards-container">
+    <article class="social-card">
+      <img src="images/instagram_image1.png" alt="">
+    </article>
+    <article class="social-card">
+      <img src="images/instagram_image2.png" alt="">
+    </article>
+    <article class="social-card">
+      <img src="images/instagram_image3.png" alt="">
+    </article>
+    <article class="social-card">
+      <img src="images/instagram_image4.png" alt="">
+    </article>
+  </section>
+</section>
+
+
+<!-- FOOTER -->
+<img id="ScrollToTopBtn" src="images/uparrow.svg" alt="scroll to top button">
+<footer id="footer" class="footer-container">
+      <section class="footer-header">
+        <h3>AmoRomA</h3>
+      </section>
+      <section class="footer-items">
+        <section class="get-in-touch">
+          <ul>
+            <li style="font-weight: bold;">Get in touch:</li>
+            <li>Vestergade 60</li>
+            <li>8000 Aarhus C</li>
+            <li>amoroma@outlook.dk</li>
+            <li>86 19 30 77</li>
+            <a href="https://www.facebook.com/restaurantamoroma/?locale=da_DK"><img src="images/facebook-1.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/ristoranteamoroma/"><img src="images/instagram-1.png" alt="Instagram"></a>
+          </ul>
+          <p>Copyright 2023 AmoRomA</p>
+        </section>
+
+          <section class="opening-hours">
+            <ul>
+              <li style="font-weight: bold;">Opening hours:</li>
+              <li>Mon-Thu 17:00 - 22:00</li>
+              <li>Fri-Sat 17:00 - 22:30 (kitchen closes at 21:30)</li>
+              <li>Sun 16:30 - 21:00 (kitchen closes at 20:30)</li>
+            </ul>
+          </section>
+          <section class="spacer"></section> <!-- Spacer article for seperating left and right-->
+          <section class="map">
+              <iframe
+                  frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2221.9742424348087!2d10.198089441446184!3d56.15754996085501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3f94a09783b5%3A0x5652c3a14d4128da!2sAmoRomA!5e0!3m2!1slv!2sdk!4v1695371385505!5m2!1slv!2sdk" width="50" height="25" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </section>
+        </section>
+  </footer>
+<script src="updated_script.js"></script>
+</body>
+</html>

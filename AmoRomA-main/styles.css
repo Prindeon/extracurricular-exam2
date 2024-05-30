@@ -1,0 +1,583 @@
+:root {
+    --primary: #BB3E00;
+    --secondary: #F7AD45;
+    --tertiary: #FFF1D7;
+    --for-menu-items:#FFF6E5;
+    --lighter-secondary: #FDC87E;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow: auto;
+    font-family: 'work sans', sans-serif; /* For the body text */
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding-bottom: 0px;
+}
+.pizza-image {
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+h1, h2, h3 {
+    font-family: 'limelight', cursive;
+}
+h1 {
+    color: var(--secondary);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 100px;
+    line-height: 95px;
+    width: 50%;
+}
+h2 {
+    color: var(--primary);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 72px;
+    margin-top: 0;
+    padding-top: 58px;
+    margin-bottom: 70px;
+
+}
+
+.amoroma {
+    font-family: 'limelight', cursive;
+    font-size: 50px;
+    margin-left: 20px; /* Distance to logo */
+    color: var(--tertiary);
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+ul {
+    list-style: none;
+}
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;  /* To remove bulletpoints */
+    padding: 0;
+    margin: 0;
+    margin-top: 28px;
+}
+.navbar ul li {
+    margin-right: 20px;
+  }
+.nav-links {
+    position: relative; /* To act as a reference for "position: absolute" to work  */
+    text-decoration: none;
+    color: #FFF6E5;
+    font-size: 18px;
+    font-weight: 500;
+}
+.nav-links::before { /* This is a pseudo element to create an underline when hovering */
+    content: ''; /* This is to create the pseudo element */
+    position: absolute;
+    width: 0; /* To make it invisible before hovering*/
+    height: 2px; /* The thickness of the underline */
+    bottom: 0; /* The distance from the text  */
+    left: 0; /* This makes the line slide in from the left*/
+    transition: width 0.3s ease; /* Animation */
+    background-color: var(--tertiary); /* setting the color of the line*/
+  }
+.nav-links:hover::before {
+    width: 100%; /* Now the width is 100% when hovering, so it is visible*/
+  }
+.spacer {
+    flex-grow: 1;
+}
+.wolt-button {
+    border-radius: 20px;
+    border: 2px solid rgb(0, 157, 224);
+    background-color: rgb(0, 157, 224);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0px 16px;
+    cursor: pointer;
+    height: 44px;
+}
+.wolt-button:hover {
+    background-color: rgb(1, 170, 255);
+    border: 2px solid rgb(0, 170, 255);
+
+}
+.wolt-img {
+ max-height: 100%;
+
+}
+.book-button {
+    border-radius: 20px;
+    border: 2px solid var(--secondary);
+    background: var(--secondary);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 11px 16px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+
+.book-button:hover {
+    background-color: var(--lighter-secondary);
+    border: 2px solid var(--lighter-secondary);
+}
+
+.menu {
+    margin: 0;
+    background-color: var(--tertiary);
+}
+
+
+/* Booking form styling start */
+.modal {
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full window width */
+    height: 100%; /* Full window height */
+
+    transition: transform 1s cubic-bezier(0.7, -0.5, 0.3, 1.6); /* gentle slide up */
+  }
+  .modal.show {
+    transform: translateY(0); /* Slide up into view */
+  }
+
+
+  
+
+  .modal-content {
+    background-image: url('images/Ellipse3.svg'), url('images/Ellipse3.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 30em 30em, 20em 35em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    border-radius: 32px;
+    width: 705px;
+    height: 561px;
+    display: flex; /* flex box for the modal */
+    flex-direction: column; /* so it go in a row */
+    flex-wrap: nowrap; /* so they stay in one row */
+    box-shadow: 0px 4px 40px 12px rgba(0, 0, 0, 0.7);
+  }
+
+
+  #reservationForm {
+    display: flex;
+}
+
+h3 {
+    display: flex;
+    margin-left: 53px;
+    margin-top: 40px;
+    font-size: 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.header {
+    display: flex;
+    margin-right: 53px;
+}
+.form-left {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+  }
+
+.form-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 16px;
+}
+#dropdown.has-placeholder {
+    color: gray;
+  }
+
+#dropdown {
+    color: black;
+    width: 300px;
+    -webkit-appearance: none;
+    font-family: 'work sans', sans-serif;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    padding-left: 16px;
+    padding-right: 25px;  /* Make space for the custom arrow */
+      
+}
+.custom-select {
+    position: relative;
+  }
+
+/* Custom dropdown arrow */
+.custom-select::after {
+    right: 65px;
+    top: 0%;
+    transform: translateY(50%);
+    pointer-events: none;  /* Makes sure the select box still works */
+  }
+
+#people {
+    display: none;
+}
+
+.form-right input, select{
+    border: none;
+    border-radius: 14px;
+    background: #F1F1F1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 36px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 16px;
+    margin-bottom: 36px;
+    text-shadow: none;
+    width: 283px;
+}
+
+
+.form-left input {
+    margin-left: 53px;
+    border: none;
+    border-radius: 14px;
+    background: #F1F1F1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 283px;
+    height: 36px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+.form-left label {
+    padding-left: 53px;
+}
+#date {
+    width: 60%;
+    line-height: 20px;
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #F1F1F1;
+}
+textarea {
+    border: none;
+    border-radius: 14px;
+    background: #F1F1F1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 283px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 16px;
+    padding-top: 5px;
+}
+.submit-button {
+    margin-top: 36px;
+    margin-right: 53px;
+    height: 52px;
+    padding: 16px 34px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    border-radius: 28px;
+    background: #5F8D37;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    border: none;
+    align-self: flex-end;
+  }
+.submit-button:active {
+    background-color: #5f7d37; /* Darker shade of the original green */
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2); /* box shadow for "pressed" effect */
+}
+.close-btn {
+    cursor: pointer;
+    align-self: center;
+    font-size: 1.5em;
+  }
+.required-asterisk {
+    color: red  ;
+}
+
+
+.hidden {
+    display: none;
+  }
+  
+  #checkmark-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 500px 50px darkgray;
+    border-radius: 60px;
+    background-color: rgb(250, 250, 250);
+  }
+
+  #confirmation-message {
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  
+  .checkmark__circle {
+    stroke: #28a745; /* Green */
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  
+  .checkmark__check {
+    stroke: #28a745; /* Green */
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: checkAnimation 1s ease-in-out 0.2s both;
+  }
+  
+  @keyframes checkAnimation {
+    0% {
+      stroke-dasharray: 0, 100;
+    }
+    100% {
+      stroke-dasharray: 60, 100;
+    }
+  }
+  
+/* Booking form styling end */
+
+
+
+
+
+
+
+#menu {
+    background-image: url('images/Ellipse2.svg'), url('images/Ellipse2.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: 218px 618px, 300px 700px;
+}
+
+#menu-buttons-container {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.menu-button {
+    padding: 10px 0px;
+    width: 150px;
+    background-color: var(--tertiary);
+    border: 2px solid var(--primary);
+    border-radius: 28px; 
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 16px; 
+    font-weight: 300;
+}
+.menu-button:hover {
+    background-color: var(--lighter-secondary);
+}
+.menu-button.active-button {
+    background-color: var(--secondary);
+    font-weight: 400;
+}
+#menu-cards-container {
+    margin: 70px 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.menu-card {
+    background-color: var(--for-menu-items);
+    border-radius: 32px;
+    box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    display: none;
+}
+
+.menu-card.active {
+    display: block;
+}
+.item-image {
+    margin: 28px 10px 0 10px;
+    height: 300px;
+    width: 300px;
+}
+.item-name {
+    font-weight: 700;
+    font-size: 2.2rem;
+    min-height: 5rem;
+    margin: 0;
+}
+.item-description {
+    color: gray;
+    font-size: 1rem;
+    font-style: italic;
+    min-height: 2rem;
+}
+.item-price {
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+/* instagram styling */
+
+#socials {
+    background-image: url('images/ellipse.svg'), url('images/ellipse.svg');
+    background-repeat: no-repeat;
+    background-position: 0%, 0%;
+    background-size: 218px 618px, 300px 700px;
+}
+
+#socials h3 {
+    margin-left: 105px;
+}
+
+/* Button position */
+.instagram-button-container {
+    display: flex;
+    justify-content: space-between; /* This will push the button to the right */
+}
+.instagram-button-container h3 {
+    margin-top: 0   ;
+}
+/* Instagram button */
+.instagram_button {
+    padding: 10px 20px; /* Adjust padding to control button size */
+    background-color: white; /* Button background color */
+    color: black; /* Text color */
+    border: 4px solid black; /* border */
+    border-radius: 28px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 22px; /* Font size */
+    margin-right: 105px;
+}
+
+
+/* Button hover effect */
+.instagram_button:hover {
+    background-color: black; /* Change background color on hover */
+    color: white;
+}
+.social-cards-container {
+    margin: 0px 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  
+  .social-card {
+    border-radius: 32px;
+    text-align: center;
+    position: relative;  
+    overflow: hidden;
+  }
+  
+  .social-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+
+  }
+  
+
+
+
+/* footer styling */
+.footer-container{
+    display: flex; /* flex box for the modal */
+    flex-direction: column;
+    background-image: url("images/footer-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    line-height: 2rem;
+}
+.footer-header {
+    width: 100%;  /* Take the full width */
+    margin: 0;
+    color: var(--secondary);
+}
+.footer-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--tertiary);
+}
+
+.get-in-touch {
+    display: flex;
+    flex-direction: column;
+    /*background-color: #5f7d37;*/
+    flex: 1;
+}
+
+.get-in-touch p {
+    margin-top: auto;
+}
+
+.opening-hours {
+    /*background-color: #F7AD45;*/
+    flex: 1;
+}
+
+.map {
+    flex: 1;
+}
+iframe {
+    height: 400px;
+    width: 600px;
+}
+/* end footer styling */
+
+
+#ScrollToTopBtn {
+    cursor: pointer;
+    bottom: 10%;
+    left: 95%;
+    position: sticky;
+    border-radius: 100px;
+    background: var(--lighter-secondary);
+    padding: 20px;
+    width: 20px;
+    height: 20px;
+}
+#ScrollToTopBtn:hover {
+    background-color: var(--secondary);
+}
+
+a {
+    cursor: pointer;
+}
